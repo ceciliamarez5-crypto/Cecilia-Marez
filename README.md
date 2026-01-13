@@ -1,102 +1,94 @@
 # Cecilia-Marez
-# 📝 Mini Aplicación To-Do – Backend en C++
+# 📌 Mini Aplicación To-Do – Backend en C++
+📖 Descripción
 
-Mini aplicación de tareas (To-Do) desarrollada en **C++**, con un **backend web usando CGI** y una **interfaz web simple en HTML**.  
-La información se almacena de forma persistente en un **archivo local (`tareas.json`)**.
+Este proyecto es una mini aplicación de tareas (To-Do) desarrollada en C++, con:
 
----
+Backend web implementado mediante CGI en C++
 
-## 🚀 Funcionalidades
+Interfaz web simple en HTML
 
-- Agregar tareas
-- Listar tareas
-- Guardar tareas en archivo local (JSON simple)
-- Backend web implementado en C++
-- Interfaz web básica
+Almacenamiento de datos en un archivo local (tareas.json)
 
----
+La aplicación permite:
 
-## 🛠️ Tecnologías utilizadas
+Agregar tareas
 
-- **C++**
-- **CGI (Common Gateway Interface)**
-- **Apache**
-- **HTML**
-- **Archivo local (JSON)**
+Listar tareas
 
----
+Guardar la información de forma persistente en un archivo
 
-## 📂 Estructura del proyecto
+🛠️ Requisitos
 
+Sistema operativo Linux
+
+Compilador g++
+
+Servidor web Apache con soporte CGI habilitado
+
+Navegador web moderno
+
+📂 Estructura del proyecto
 /cgi-bin/
-tareas.cpp # Backend en C++ (CGI)
-tareas.cgi # Ejecutable compilado
+   tareas.cpp   → Backend en C++ (CGI)
+   tareas.cgi   → Ejecutable compilado
 /www/
-index.html # Interfaz web
-tareas.json # Almacenamiento de datos
-README.md
+   index.html   → Interfaz web
+tareas.json     → Archivo de almacenamiento
 
-yaml
-Copiar código
+▶️ Cómo ejecutar la solución
+1️⃣ Compilar el backend en C++
 
----
+Desde la terminal:
 
-## ▶️ Cómo ejecutar la solución
-
-### 1️⃣ Requisitos
-
-- Sistema operativo **Linux**
-- **g++** instalado
-- **Apache** con soporte CGI habilitado
-- Navegador web
-
----
-
-### 2️⃣ Compilar el backend
-
-```bash
 g++ tareas.cpp -o tareas.cgi
 chmod +x tareas.cgi
-Mover el archivo compilado a:
 
-bash
-Copiar código
+
+Colocar el archivo tareas.cgi dentro del directorio:
+
 /var/www/cgi-bin/
-3️⃣ Configurar Apache (CGI)
-Agregar o verificar la siguiente configuración:
 
-apache
-Copiar código
+2️⃣ Configurar Apache para CGI
+
+Verificar que Apache tenga habilitado CGI con la siguiente configuración:
+
 ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
 <Directory "/var/www/cgi-bin">
     Options +ExecCGI
     AddHandler cgi-script .cgi
     Require all granted
 </Directory>
+
+
 Reiniciar Apache:
 
-bash
-Copiar código
 sudo service apache2 restart
-4️⃣ Ejecutar la aplicación
+
+3️⃣ Ejecutar la aplicación
+
 Abrir el navegador y acceder a:
 
-arduino
-Copiar código
 http://localhost/index.html
+
+
 Desde ahí se pueden agregar tareas y comunicarse con el backend en C++.
 
 ⚠️ Aclaraciones importantes
+
 El backend está implementado en C++ usando CGI, una tecnología sencilla y adecuada para fines académicos.
 
-No se utilizan librerías externas para manejar JSON.
+No se utilizan librerías externas (JSON se maneja de forma básica).
 
-El diseño es simple y enfocado en el aprendizaje.
+El diseño es intencionalmente simple para priorizar la lógica y el funcionamiento.
 
-No es una aplicación pensada para producción.
+La aplicación no está pensada para producción, solo para aprendizaje.
 
 ⭐ Extras
-Persistencia de datos en archivo local
+
+Persistencia de datos mediante archivo local
+
+Backend web real en C++
 
 Comunicación HTTP básica
 
