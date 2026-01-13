@@ -65,8 +65,7 @@ ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
 Reiniciar Apache:
 
 sudo service apache2 restart
-
- ### 4 Ejecutar la aplicación
+4️⃣ Ejecutar la aplicación
 
 Abrir el navegador y acceder a:
 
@@ -75,7 +74,7 @@ http://localhost/index.html
 
 Desde ahí se pueden agregar tareas y comunicarse con el backend en C++.
 
-### 5 Aclaraciones importantes
+⚠️ Aclaraciones importantes
 
 El backend está implementado en C++ usando CGI, una tecnología sencilla y adecuada para fines académicos.
 
@@ -85,7 +84,7 @@ El diseño es simple y enfocado en el aprendizaje.
 
 No es una aplicación pensada para producción.
 
- ### 6 Extras
+⭐ Extras
 
 Persistencia de datos en archivo local
 
