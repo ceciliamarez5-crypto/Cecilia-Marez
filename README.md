@@ -34,7 +34,7 @@ La información se almacena de forma persistente en un **archivo local (`tareas.
 
 ### 1 Requisitos
 
-- Sistema operativo **Linux**
+- Sistema operativo
 - **g++** instalado
 - **Apache** con soporte CGI habilitado
 - Navegador web
