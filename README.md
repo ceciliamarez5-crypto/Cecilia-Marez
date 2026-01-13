@@ -50,6 +50,22 @@ chmod +x tareas.cgi
 Mover el archivo compilado a:
 
 /var/www/cgi-bin/
+### 3️ Configurar Apache (CGI)
+
+Agregar o verificar la siguiente configuración:
+
+ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+<Directory "/var/www/cgi-bin">
+    Options +ExecCGI
+    AddHandler cgi-script .cgi
+    Require all granted
+</Directory>
+
+
+Reiniciar Apache:
+
+sudo service apache2 restart
+
 Ejecutar la aplicación
 
 Abrir el navegador y acceder a:
