@@ -66,7 +66,7 @@ Reiniciar Apache:
 
 sudo service apache2 restart
 
-Ejecutar la aplicación
+ ### 4 Ejecutar la aplicación
 
 Abrir el navegador y acceder a:
 
@@ -75,7 +75,7 @@ http://localhost/index.html
 
 Desde ahí se pueden agregar tareas y comunicarse con el backend en C++.
 
-Aclaraciones importantes
+### 5 Aclaraciones importantes
 
 El backend está implementado en C++ usando CGI, una tecnología sencilla y adecuada para fines académicos.
 
@@ -85,7 +85,7 @@ El diseño es simple y enfocado en el aprendizaje.
 
 No es una aplicación pensada para producción.
 
- Extras
+ ### 6 Extras
 
 Persistencia de datos en archivo local
 
